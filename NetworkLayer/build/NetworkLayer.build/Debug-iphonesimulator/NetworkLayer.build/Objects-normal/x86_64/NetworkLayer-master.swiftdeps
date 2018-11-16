@@ -1,0 +1,11 @@
+version: "Apple Swift version 4.1 (swiftlang-902.0.48 clang-902.0.37.1)"
+options: "af2faf20015e5e6114c5cfe3632e16f0"
+build_time: [1542341963, 323297000]
+inputs:
+  "/Users/Girish/Workspace/iCode/NetworkLayer/NetworkLayer/NetworkManager.swift": [1542341549, 0]
+  "/Users/Girish/Workspace/iCode/NetworkLayer/NetworkLayer/NetworkFailure.swift": [1542341954, 0]
+  "/Users/Girish/Workspace/iCode/NetworkLayer/NetworkLayer/ViewController.swift": [1542341905, 0]
+  "/Users/Girish/Workspace/iCode/NetworkLayer/NetworkLayer/NetworkCompletion.swift": [1542338768, 0]
+  "/Users/Girish/Workspace/iCode/NetworkLayer/NetworkLayer/User.swift": [1542341175, 0]
+  "/Users/Girish/Workspace/iCode/NetworkLayer/NetworkLayer/HTTPMethodType.swift": [1542333812, 0]
+  "/Users/Girish/Workspace/iCode/NetworkLayer/NetworkLayer/AppDelegate.swift": [1542217726, 0]
