@@ -15,17 +15,15 @@ class DataHandler {
     let dataArray = ["user 1", "user 2", "user 3"]
 
     func insertData() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let userEntity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
+        let userEntity = NSEntityDescription.entity(forEntityName: "User", in: managedContext()!)!
         
         for value in dataArray {
-            let user = NSManagedObject(entity: userEntity, insertInto: managedContext)
+            let user = NSManagedObject(entity: userEntity, insertInto: managedContext())
             user.setValue(value, forKey: "name")
         }
         
         do{
-            try managedContext.save()
+            try managedContext()?.save()
         }catch {
             print(Failure.DataBaseError)
         }
@@ -33,15 +31,13 @@ class DataHandler {
     
     func fetchData() {
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         //        fetchRequest.predicate = NSPredicate(format: "name = %@", "user 1")
         //        fetchRequest.fetchLimit = 2;
         fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "name", ascending: true)]
         
         do {
-            let result = try managedContext.fetch(fetchRequest)
+            let result = try managedContext()?.fetch(fetchRequest)
             for data in result as! [NSManagedObject]{
                 print(data.value(forKey: "name") as! String)
             }
@@ -52,19 +48,17 @@ class DataHandler {
     }
     
     func updateData() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "name", ascending: false)]
         
         do {
-            let result = try managedContext.fetch(fetchRequest)
+            let result = try managedContext()?.fetch(fetchRequest)
             for data in result as! [User] {
                 data.name = "Renamed \(data.name ?? "")"
             }
             
             do {
-                try managedContext.save()
+                try managedContext()?.save()
             }catch {
                 print(Failure.DataBaseError)
             }
@@ -75,19 +69,17 @@ class DataHandler {
     }
     
     func deleteData() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         fetchRequest.fetchLimit = 3
         
         do {
-            let result = try managedContext.fetch(fetchRequest)
+            let result = try managedContext()?.fetch(fetchRequest)
             for data in result as! [NSManagedObject] {
-                managedContext.delete(data)
+                managedContext()?.delete(data)
             }
             
             do {
-                try managedContext.save()
+                try managedContext()?.save()
             } catch {
                 print(Failure.DataBaseError)
             }
@@ -95,5 +87,12 @@ class DataHandler {
         }catch {
             print(Failure.DataBaseError)
         }
+    }
+    
+    func managedContext() -> NSManagedObjectContext? {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        return managedContext
     }
 }

@@ -14,10 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        doDBOperation()
+        performDBOperation()
     }
     
-    func doDBOperation() {
+    func performDBOperation() {
         let dataHandler = DataHandler()
         dataHandler.insertData()
         dataHandler.updateData()
