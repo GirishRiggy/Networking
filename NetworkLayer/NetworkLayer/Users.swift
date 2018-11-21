@@ -8,12 +8,9 @@
 
 import Foundation
 
-class User : NSObject {
+class Users : NSObject {
     
-    var userId : Int?
-    var id : Int?
-    var title : String?
-    var completed : Bool?
+    @objc var name : String?
     
     init(jsonData: Data) {
         super.init()
