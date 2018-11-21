@@ -1,0 +1,15 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "4ce5fbed0d673d8d26ca683581e80a98"
+build_time: [1542819584, 764502000]
+inputs:
+  "/Users/iCode/Workspace/iWork/Networking/NetworkLayer/Network/NetworkManager.swift": [1542380365, 0]
+  "/Users/iCode/Workspace/iWork/Networking/NetworkLayer/Network/NetworkFailure.swift": [1542380365, 0]
+  "/Users/iCode/Workspace/iWork/Networking/NetworkLayer/Services/NetworkService.swift": [1542819342, 0]
+  "/Users/iCode/Workspace/iWork/Networking/NetworkLayer/NetworkLayer/ViewController.swift": !dirty [1542819492, 0]
+  "/Users/iCode/Workspace/iWork/Networking/NetworkLayer/NetworkLayer/DataHandler.swift": !dirty [1542819578, 0]
+  "/Users/iCode/Workspace/iWork/Networking/NetworkLayer/Network/NetworkCompletion.swift": !dirty [1542380365, 0]
+  "/Users/iCode/Workspace/iWork/Networking/NetworkLayer/Network/HTTPMethodType.swift": [1542380365, 0]
+  "/Users/iCode/Workspace/iWork/Networking/NetworkLayer/NetworkLayer/AppDelegate.swift": [1542380365, 0]
+  "/Users/iCode/Workspace/iWork/Networking/NetworkLayer/build/NetworkLayer.build/Debug-iphonesimulator/NetworkLayer.build/DerivedSources/CoreDataGenerated/NetworkLayer/User+CoreDataClass.swift": [1542814379, 0]
+  "/Users/iCode/Workspace/iWork/Networking/NetworkLayer/build/NetworkLayer.build/Debug-iphonesimulator/NetworkLayer.build/DerivedSources/CoreDataGenerated/NetworkLayer/User+CoreDataProperties.swift": [1542814379, 0]
+  "/Users/iCode/Workspace/iWork/Networking/NetworkLayer/build/NetworkLayer.build/Debug-iphonesimulator/NetworkLayer.build/DerivedSources/CoreDataGenerated/NetworkLayer/NetworkLayer+CoreDataModel.swift": [1542814379, 0]

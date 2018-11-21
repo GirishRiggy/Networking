@@ -19,7 +19,8 @@
 		68772039219DF63900D2899B /* HTTPMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68772038219DF63900D2899B /* HTTPMethodType.swift */; };
 		6877203B219E5CC000D2899B /* NetworkCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6877203A219E5CC000D2899B /* NetworkCompletion.swift */; };
 		6877203D219E6FCE00D2899B /* NetworkFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6877203C219E6FCE00D2899B /* NetworkFailure.swift */; };
-		6877203F219E70FB00D2899B /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6877203E219E70FB00D2899B /* Users.swift */; };
+		B1AC7A1E21A5C55900F31379 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC7A1D21A5C55900F31379 /* NetworkService.swift */; };
+		B1AC7A2321A5C65400F31379 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC7A2221A5C65400F31379 /* DataHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,8 @@
 		68772038219DF63900D2899B /* HTTPMethodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodType.swift; sourceTree = "<group>"; };
 		6877203A219E5CC000D2899B /* NetworkCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCompletion.swift; sourceTree = "<group>"; };
 		6877203C219E6FCE00D2899B /* NetworkFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFailure.swift; sourceTree = "<group>"; };
-		6877203E219E70FB00D2899B /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		B1AC7A1D21A5C55900F31379 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B1AC7A2221A5C65400F31379 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,8 @@
 		68771FF9219C977D00D2899B = {
 			isa = PBXGroup;
 			children = (
+				B1AC7A1C21A5C54300F31379 /* Services */,
+				B1AC7A1B21A5C4D100F31379 /* Network */,
 				B1AC7A1A21A5A6A700F31379 /* Model */,
 				68772004219C977E00D2899B /* NetworkLayer */,
 				6877201C219C978F00D2899B /* NetworkLayerTests */,
@@ -112,11 +116,6 @@
 			children = (
 				68772005219C977E00D2899B /* AppDelegate.swift */,
 				68772007219C977E00D2899B /* ViewController.swift */,
-				68772036219DF45F00D2899B /* NetworkManager.swift */,
-				68772038219DF63900D2899B /* HTTPMethodType.swift */,
-				6877203A219E5CC000D2899B /* NetworkCompletion.swift */,
-				6877203C219E6FCE00D2899B /* NetworkFailure.swift */,
-				6877203E219E70FB00D2899B /* Users.swift */,
 				68772009219C977E00D2899B /* Main.storyboard */,
 				6877200F219C978E00D2899B /* Assets.xcassets */,
 				68772011219C978E00D2899B /* LaunchScreen.storyboard */,
@@ -147,8 +146,28 @@
 		B1AC7A1A21A5A6A700F31379 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B1AC7A2221A5C65400F31379 /* DataHandler.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B1AC7A1B21A5C4D100F31379 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				68772036219DF45F00D2899B /* NetworkManager.swift */,
+				68772038219DF63900D2899B /* HTTPMethodType.swift */,
+				6877203A219E5CC000D2899B /* NetworkCompletion.swift */,
+				6877203C219E6FCE00D2899B /* NetworkFailure.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B1AC7A1C21A5C54300F31379 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B1AC7A1D21A5C55900F31379 /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,9 +303,10 @@
 			files = (
 				68772037219DF46000D2899B /* NetworkManager.swift in Sources */,
 				6877203D219E6FCE00D2899B /* NetworkFailure.swift in Sources */,
+				B1AC7A1E21A5C55900F31379 /* NetworkService.swift in Sources */,
 				68772008219C977E00D2899B /* ViewController.swift in Sources */,
+				B1AC7A2321A5C65400F31379 /* DataHandler.swift in Sources */,
 				6877203B219E5CC000D2899B /* NetworkCompletion.swift in Sources */,
-				6877203F219E70FB00D2899B /* Users.swift in Sources */,
 				68772039219DF63900D2899B /* HTTPMethodType.swift in Sources */,
 				6877200E219C977E00D2899B /* NetworkLayer.xcdatamodeld in Sources */,
 				68772006219C977E00D2899B /* AppDelegate.swift in Sources */,

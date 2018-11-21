@@ -11,4 +11,5 @@ import Foundation
 public enum Failure : String {
     case NetworkFailure = "Network Error"
     case JSONSerilaizationError = "Data Error"
+    case DataBaseError = "DB error"
 }

@@ -164,7 +164,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import CoreData;
-@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -209,14 +208,6 @@ SWIFT_CLASS_NAMED("User")
 
 @interface User (SWIFT_EXTENSION(NetworkLayer))
 @property (nonatomic, copy) NSString * _Nullable name;
-@end
-
-
-SWIFT_CLASS("_TtC12NetworkLayer5Users")
-@interface Users : NSObject
-@property (nonatomic, copy) NSString * _Nullable name;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 @class NSBundle;

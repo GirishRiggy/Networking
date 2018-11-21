@@ -8,9 +8,12 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class DataHandler {
     
+    let dataArray = ["user 1", "user 2", "user 3"]
+
     func insertData() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -23,8 +26,8 @@ class DataHandler {
         
         do{
             try managedContext.save()
-        }catch let error as NSError {
-            print("Save Entity Failed : \(error)")
+        }catch {
+            print(Failure.DataBaseError)
         }
     }
     
@@ -43,7 +46,7 @@ class DataHandler {
                 print(data.value(forKey: "name") as! String)
             }
         }catch{
-            print("Error retrieving data")
+            print(Failure.DataBaseError)
         }
         
     }
@@ -63,11 +66,11 @@ class DataHandler {
             do {
                 try managedContext.save()
             }catch {
-                print("Error saving data")
+                print(Failure.DataBaseError)
             }
             
         } catch {
-            print("DB Error")
+            print(Failure.DataBaseError)
         }
     }
     
@@ -86,11 +89,11 @@ class DataHandler {
             do {
                 try managedContext.save()
             } catch {
-                print("Error")
+                print(Failure.DataBaseError)
             }
             
         }catch {
-            print("Error")
+            print(Failure.DataBaseError)
         }
     }
 }
